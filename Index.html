@@ -1,34 +1,129 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
-<header>
-    <style>
-       
-    </style>
-</header>
-<body>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<h2>HTML Forms</h2>
-<!-- this form is used for login -->
-<form  action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
-</form> 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&family=Yusei+Magic&display=swap" rel="stylesheet">
 
-<!-- this form is used for register -->
+    <title>SCC | Shopping Mall</title>
+    <script>
+    function order(){
+      alert('Your order has been placed.');
+    }
+    </script>
+<style>
 
-<form action="/action_page.php">
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" value="John"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" value="Doe"><br><br>
-    <input type="submit" value="Submit">
-  </form> 
+.yusei-magic-regular {
+  font-family: "Yusei Magic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1{
+  font-size: 28px;
+}
+h2{
+
+  font-size: 20px;
+}
+p{
+  font-size: 15px;
+}
+
+.coverimage { 
+    text-align: center;
+  }
+
+body { 
+  padding:0px 30%;
+}
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    margin-right: 0;
+    margin-left: 0;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.form-group {
+    display: flex;
+    margin-bottom: 1rem;
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 4px;
+}
+</style>
+</head>
+
+<body class="yusei-magic-regular">
+
+        <div class="coverimage">
+            <img src="candles.jpeg" style = "width: 100%;"/>
+        </div>
+        <div class="row"> 
+                <h1>Sparta candles</h1> <h2 style="margin-left: 15px;"> Price: $3 each</h2>
+        </div>  
+        <div>  
+                <p>These candles actually have superpowers.</p>
+        </div>
+        <form class="form">
+            <div>
+              <!-- <label for="firstname">Your name: </label>
+              <input type="text" name="firstname"  required> -->
+              <div class="input-group mb-2 mr-sm-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">Your name: </div>
+                </div>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="input-group mb-2 mr-sm-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">Quantity</div>
+              </div>
+              <input type="number" min="0" class="form-control" placeholder="--Please select quantity--">
+            </div>
+          </div>
+          <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Address </div>
+            </div>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="input-group mb-2 mr-sm-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Phone Number </div>
+          </div>
+          <input type="tel" class="form-control">
+        </div>
+      </div>
+      <div style="text-align: center;">
+      <button onclick="order()" type="submit" style="padding-left: 20px; padding-right: 20px;" class="btn btn-primary mb-2">Order</button>
+    </div>
+        </form>
 </body>
 </html>
-
